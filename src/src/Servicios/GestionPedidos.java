@@ -62,4 +62,12 @@ public class GestionPedidos {
         }
         return false;
     }
+    public String obtenerEstado(int id) {
+        for (Pedido p : pedidos) {
+            if (p.getId() == id) {
+                return p.getEstado();
+            }
+        }
+        return "Pedido no Encontrado";
+    }
 }
