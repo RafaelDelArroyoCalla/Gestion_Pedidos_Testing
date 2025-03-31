@@ -49,4 +49,13 @@ public class GestionInventario {
     public List<Producto> obtenerInventario() {
         return productos;
     }
+
+    public int obtenerStock(String nombre) {
+        for (Producto p : productos) {
+            if (p.getNombre().equals(nombre)) {
+                return p.getStock();
+            }
+        }
+        return 0;
+    }
 }
